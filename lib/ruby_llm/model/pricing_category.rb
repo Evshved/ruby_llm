@@ -42,6 +42,7 @@ module RubyLLM
         @long_context = tier_from(data[:long_context])
         @long_context_threshold = Integer(data[:long_context_threshold], exception: false)
         @context_tiers = context_tiers_from(data[:context_tiers])
+        freeze
       end
 
       # Returns the standard-tier input price in USD per million tokens,
